@@ -1,0 +1,157 @@
+aside.sidebar_container {
+    overflow: hidden;
+    float: right;
+    width: 29%;
+    margin: 0 0 0 1%;
+    height: 100%;
+    @media screen and (max-width: 1065px) {
+        display:none;
+    }
+    div.sidebar-widget-area {
+        margin: 0 0 20px 0;
+        padding: 20px 15px;
+        font-size: 95%;
+        &.widgAgenda {
+            img.titulo-agenda {
+                display: block;
+                width: 50%;
+                margin: 30px auto 0;
+            }
+            .em-calendar-wrapper {
+                height: 300px;
+            }
+            div {
+                overflow: hidden;
+                padding: 0 10px;
+                ul {
+                    text-align: center;
+                }
+                h4 {
+                    margin-bottom: 10px;
+                    text-align: center;
+                    color: $e;
+                    font-size: 2em;
+                }
+                img {
+                    width: 100%;
+                }
+                table.em-calendar {
+                    width: 300px;
+                    height: 270px;
+                    margin: 10px auto 0;
+                    thead tr {
+                        height: 40px;
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                box-sizing: border-box;
+                                vertical-align: middle;
+                                &.eventful {
+                                    font-weight: bold; // background-color: $a;
+                                    a {
+                                        color: $a;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            h4 {
+                position: relative;
+                top: 10px;
+            }
+            padding: 0; //border-top: 50px solid $a;
+            // border-bottom: 50px solid $a;
+            button.widget {
+                display: block;
+                position: relative;
+                top: 2px; // width: 80%;
+                margin: 0 auto;
+                background-color: $a;
+                font-size: 180%;
+                font-family: BenchNine;
+                font-weight: 300;
+                color: white;
+                height: 50px;
+                border: none;
+                transition: all ease .4s;
+                &:hover {
+                    background-color: $hover;
+                    color: #212121;
+                }
+            }
+        }
+        &.widgAvion {
+            padding: 5px;
+            text-align: center;
+            a {
+                h4 {
+                    color: $a;
+                    margin-bottom: 0;
+                    text-align: left;
+                    font-size: .9em;
+                    font-weight: 700;
+                }
+            }
+            a>img {
+                width: 90%;
+            } // hr {
+            //     border-top: 1px dotted $a;
+            //     border-bottom: none;
+            //     margin: 0 30px 20px;
+            // }
+            article.avion-post {
+                // box-shadow: 1px 1px 4px 1px #d1d1d1;
+                div.featured-video-plus {
+                    iframe {
+                        width: 100% !important;
+                        height: 300px;
+                    }
+                }
+                &:nth-of-type(1) {
+                    h4 {
+                        padding: 10px 10px;
+                        text-align: center;
+                        padding-bottom: 20px;
+                        margin-top: 10px;
+                    }
+                }
+                div.thumb-cont {
+                    margin: 0 0 20px 0;
+                }
+                margin: 10px 5px;
+                &:hover {
+                    @include aq-shadow();
+                }
+                .thumbAvion,
+                .contentAvion {
+                    box-sizing: border-box;
+                    float: left;
+                    height: 100px;
+                }
+                .thumbAvion {
+                    width: 35%;
+                    background-size: cover;
+                    background-position: center;
+                    #play {
+                        display: block;
+                        color: rgba(255, 255, 255, .7);
+                    }
+                }
+                .contentAvion {
+                    width: 65%;
+                    padding: 5px 10px;
+                }
+            }
+        }
+        &.widg3,
+        &.widg4,
+        &.widg5,
+        &.widg6 {
+            padding: 0;
+            text-align: center;
+        }
+    }
+}

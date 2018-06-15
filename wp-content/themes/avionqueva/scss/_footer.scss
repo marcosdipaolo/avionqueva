@@ -1,0 +1,116 @@
+div.footer {
+    background-color: $a;
+    overflow: hidden;
+    div.social {
+        text-align: center;
+        @include ul-social(250px, $b, 40px);
+        margin-top: 0;
+        a {
+            // border: none;
+            padding: 0;
+            padding: 8px;
+        }
+    } // WIDGETS
+    div.footer-widgets {
+        color: $b;
+        padding: 50px 50px 0;
+        &.uk-grid-divider.uk-grid-stack>.uk-grid-margin::before {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        &.uk-grid-divider>:not(.uk-first-column)::before {
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            ;
+        }
+        label {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            li:not(li#events) {
+                padding-bottom: 10px;
+                font-weight: 400;
+            }
+        }
+        div.footer-widget-area {
+            color: $b;
+            box-sizing: border-box;
+            text-align: center;
+            table#wp-calendar {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .widget-footer {
+                @include di-latest-widget(white);
+                max-width: 320px;
+                h5,
+                caption {
+                    color: $b;
+                    margin: 0;
+                    font-size: 1.4em;
+                    &.title-widget {
+                        font-family: Roboto;
+                        margin: 0 0 20px 0;
+                        font-weight: 100;
+                    }
+                }
+            }
+            a {
+                color: $b;
+                &:hover {
+                    color: $hover;
+                }
+            }
+            select {
+                font-size: 100%;
+            }
+            ul {
+                padding: 0;
+                &#menu-menu-footer {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+div.footer-feet {
+    font-family: BenchNine-light;
+    height: 40px;
+    background-color: $a;
+    font-size: 110%;
+    overflow: hidden;
+    position: relative;
+    a {
+        h4.design {
+            text-align: center;
+            width: 100%;
+            float: left;
+            font-family: sans-serif;
+            font-weight: 300;
+            font-size: .7em;
+            color: $b;
+            position: relative;
+            top: 15px;
+            transition: all ease .2s;
+            &:hover {
+                color: $hover;
+            }
+            @media screen and (max-width: 400px) {
+                font-size: 1.2em;
+                width: 210px;
+            }
+        }
+    }
+    div.menu-menu-footer-container {
+        width: 420px;
+        height: 20px;
+        float: right;
+        @media screen and (max-width: 730px) {
+            float: none;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 460px) {
+            width: 185px;
+        }
+    }
+}

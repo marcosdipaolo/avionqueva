@@ -1,0 +1,1 @@
+<ul class="em-categories-list" uk-tab="animation: uk-animation-fade; duration: 200; swiping: false;">

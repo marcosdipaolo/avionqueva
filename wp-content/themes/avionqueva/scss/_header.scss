@@ -1,0 +1,219 @@
+/*      MENU'S        */
+
+div.main-banner {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+    height: 350px;
+    &.nosotros {
+        background-position: 0% 30%;
+    }
+    // @media(max-width: 650px) {
+    //     background-position: 40% 0%;
+    //     height: 300px;
+    // }
+    h3.titulo {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        @include h3Titulo(4em);
+        @media(max-width: 1300px){
+            @include h3Titulo(3em);
+        }
+    }
+    #istvansch {
+        color: black;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        text-orientation: sideways;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        text-shadow: 1px 1px 3px white;
+    } 
+    img.logo {
+        // position: absolute;
+        // right: 30%;
+        // bottom: 220px;
+        display: block;
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+        @media(max-width: 700px) {
+            margin: 0 0 0 250px ;
+        }
+        @media(max-width: 500px) {
+            margin: 0 0 0 220px;
+            width:200px;
+        }
+        @media(max-width: 420px) {
+            margin: 0 0 0 220px;
+            width:150px;
+        }
+    }
+}
+
+div[uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"]>nav,
+nav.uk-navbar.uk-navbar-container {
+    &.nav-header {
+        a.uk-logo {
+            padding: 0 0 0 15px;
+        }
+        a.uk-icon-button {
+            background: $b;
+            color: $a;
+            &:hover {
+                background: $hover;
+                color: white;
+            }
+        }
+        @include aq-shadow();
+        z-index: 1000;
+        height: 70px;
+        background-color: $a;
+        img#logo {
+            float: left;
+            margin: -5px 0 0 2%;
+            width: 150px; // @media screen and (max-width: 1050px) {
+            //     display: none;
+            // }
+            @media screen and (max-width: 960px) {
+                display: inline;
+            }
+        }
+        div.menu-menu-primario-container {
+            margin-bottom: 15px;
+            ul {
+                padding-left: 0;
+                li {
+                    float: left;
+                    font-size: 1.8em;
+                    &:last-child {
+                        margin-right: 10px;
+                    }
+                    a {
+                        padding: 0 1vw;
+                        transition: all .1s;
+                        &:link,
+                        &:visited {
+                            color: $b;
+                        }
+                        &:hover {
+                            color: $hover;
+                            list-style: none;
+                            text-decoration: none;
+                        }
+                    }
+                    div.uk-navbar-dropdown {
+                        width: 200px;
+                        top: 55px!important;
+                        padding: 5px;
+                        background-color: $a;
+                        @include aq-shadow;
+                        ul {
+                            li {
+                                font-family: BenchNine;
+                                font-size: 200%;
+                                float: none;
+                                padding-bottom: 10px;
+                                a {
+                                    color: $b;
+                                    &:hover {
+                                        color: $hover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #s,
+        form>input#s::placeholder,
+        .uk-navbar-left.uk-flex-1>a {
+            color: $b;
+            opacity: .8;
+        }
+    }
+}
+
+div.uk-sticky-placeholder {
+    @media(max-width: 960px) {
+        display: none;
+    }
+}
+
+// header {
+//     &.site-header {
+//         margin-bottom: 50px;
+//     }
+// }
+div#icono {
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    z-index: 3000;
+    transition: all ease .4s;
+    -ms-transition: all ease .4s;
+    a[href="#offcanvas-usage"] {
+        color: $b;
+        transition: color .2s ease;
+        &:hover {
+            color: $hover;
+        }
+    }
+    @media screen and (max-width: 1035px) {
+        display: inline;
+    }
+}
+
+ul#menu-menu-primario,
+ul#menu-menu-primario-1 {
+    margin-top: 16px;
+    font-weight: 400;
+    list-style: none;
+    li>a {
+        font-family: BenchNine;
+        font-size: .9em;
+        text-transform: none;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+ul#menu-menu-primario-1 {
+    font-size: 1.4em;
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.uk-offcanvas-bar {
+    background-color: darken($a, 10%);
+    opacity: .9;
+    a {
+        &:hover {
+            color: $hover;
+        }
+    }
+}
+
+button.hamburger {
+    span>span,
+    span:before,
+    span:after {
+        background-color: $b;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+/*      FIN     MENU'S        */

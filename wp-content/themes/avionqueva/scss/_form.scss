@@ -1,0 +1,63 @@
+$ancho: 60%;
+div.contacto-container {
+    padding: 120px 0;
+    background-image: url("img/bedge-grunge.png");
+    form#wpforms-form-629 {
+        font-family: Raleway;
+        font-weight: 500;
+        width: $ancho;
+        margin: 0 auto;
+        padding: 40px;
+        div {
+            label {
+                font-size: 120%;
+                font-weight: inherit;
+            }
+            input,
+            textarea,
+            button {
+                border: none;
+                margin-top: 20px;
+                background-color: lighten($a, 10%);
+                color: white;
+                transition: all .2s;
+                font-weight: inherit;
+                &:focus {
+                    background-color: lighten($a, 20%);
+                    font-weight: inherit;
+                }
+            }
+            input {
+                display: block;
+                height: 45px;
+                width: 167%;
+            }
+            textarea {
+                width: 100%;
+            }
+            button#wpforms-submit-629 {
+                &:hover {
+                    background-color: lighten($a, 20%);
+                }
+            }
+        }
+         ::-webkit-input-placeholder {
+            color: lighten($a, 40%);
+            font-style: italic;
+        }
+         :-moz-placeholder {
+            /* Firefox 18- */
+            color: lighten($a, 40%);
+            font-style: italic;
+        }
+         ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: lighten($a, 40%);
+            font-style: italic;
+        }
+         :-ms-input-placeholder {
+            color: lighten($a, 40%);
+            font-style: italic;
+        }
+    }
+}

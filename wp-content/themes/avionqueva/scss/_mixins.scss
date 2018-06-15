@@ -1,0 +1,224 @@
+@mixin di-latest-widget($color) {
+    div.di-custom-latest {
+        div.latest-post {
+            width: 80%;
+            margin: 0 auto;
+            img {
+                display: block;
+                float: left;
+                width: calc(30% - 10px);
+            }
+            h5 {
+                float: right;
+                width: 70%; 
+                font-size: 85%;
+                text-align: left;
+                color: $color;
+                margin-bottom: 0;
+                @media (max-width: 1450px) {
+                    font-size: 75%;
+                }
+                &:hover {
+                    color: inherit;
+                } // margin-left: 10px;
+                // margin-left: 10px;
+            }
+        }
+        hr {
+            border-color: rgba(255,255,255,0.1);
+            width: 80%;
+            margin: 15px auto;
+        }
+    }
+}
+// @mixin caja-blanca {
+//     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+//     background-color: #fff;
+// }
+@mixin aq-shadow() {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@mixin h3Titulo($size) {
+    font-family: Lato;
+    font-weight: 300;
+    font-size: $size;
+    color: $a;
+    text-shadow: 1px 1px 3px white;
+}
+
+@mixin textura() {
+    background-image: url("img/textura4.png");
+    background-color: rgb(255, 245, 188);
+}
+
+// @mixin caja-negra {
+//     box-shadow: -2px 2px 10px rgba(0, 0, 0, .8);
+//     background-color: #555;
+// }
+// @mixin inputField($width) {
+//     border: none;
+//     height: 45px;
+//     width: $width;
+//     padding-left: 10px;
+//     font-weight: inherit;
+// }
+// @mixin inputSubmit($width, $bg-color) {
+//     text-transform: uppercase;
+//     letter-spacing: 2px;
+//     border: none;
+//     height: 45px;
+//     width: $width;
+//     font-weight: inherit;
+//     background-color: $bg-color;
+//     color: inherit;
+// }
+@mixin foto ($ancho_borde: 15px,
+$sombra: true,
+$color-borde: white) {
+    @if $sombra==true {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+    @else {
+        box-shadow: 0 0 0 0;
+    }
+    border: $ancho_borde solid $color-borde;
+}
+
+@mixin ul-social ($width,
+$color: white,
+$marginA: 40px) {
+    font-size: 30px;
+    display: block;
+    width: $width;
+    margin: 60px auto;
+    height: 40px;
+    color: $color;
+    a {
+        margin-right: $marginA;
+        
+             border: 2px solid $color;
+             border-radius: 50%;
+             padding: 8px;
+        
+        &:last-child {
+                margin-right: 0;
+        }
+        &:hover {
+            border: 2px solid $hover;
+        }
+    }
+}
+
+// @mixin div-search($color, $fontSize) {
+//     color: $color;
+//     width: 100%;
+//     input#s {
+//         @include inputField(69%);
+//         padding: 0 20px;
+//         font-style: italic;
+//     }
+//     input#searchsubmit {
+//         @include inputSubmit(29%, lighten($a, 20%));
+//         font-size: $fontSize;
+//         padding: 0;
+//         position: relative;
+//         top: 1px;
+//     }
+//     input {
+//         margin: 0;
+//     }
+// }
+@mixin boton-encuesta($width: 100px) {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    height: 45px;
+    width: $width;
+    background-color: #5993b3;
+    color: white;
+    float: right;
+    &:hover {
+        cursor: pointer;
+        background-color: brown;
+        transition: background-color .3s;
+    }
+}
+
+@mixin mensajes-admin() {
+    color: white;
+    h6 {
+        margin-left: 20px;
+    }
+    &:hover {
+        color: #90ee90;
+    }
+}
+
+@mixin espacio-pub() {
+    h4.espacio-pub {
+        user-select: none;
+        margin-top: 60px;
+        line-height: 60px;
+        color: #f5f5f5;
+        font-family: BenchNine;
+        font-weight: 300;
+        font-size: 270%;
+        text-align: center;
+    }
+    height: 300px;
+}
+
+@mixin alignPhoto() {
+    .alignleft {
+        float: left;
+        margin: 20px 20px 20px 0;
+    }
+    .alignright {
+        float: right;
+        margin: 20px 0 20px 20px;
+    }
+    .aligncenter {
+        display: block;
+        margin: 20px auto;
+    }
+    .alignnone {
+        display: block;
+        margin: 20px 20px 20px 0;
+    }
+    .wp-caption-text {
+        text-align: center;
+        font-size: 80%;
+        color: #555;
+    }
+}
+
+@mixin todoYNoTodo {
+    div.uk-card-media-left {
+        width: 50%;
+    }
+    div.aq-body {
+        width: 50%;
+        @media(max-width: 460px) {
+            width: 100%;
+        }
+        div {
+            div.mapa {
+                display: none;
+            }
+            div.contenido-evento {
+                width: 100%;
+            }
+        }
+        div.event-categories {
+            select {
+                color: #555;
+                border: 1px solid #eaeaea;
+                padding: 10px 20px;
+                option {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}

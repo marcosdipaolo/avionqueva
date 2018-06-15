@@ -1,0 +1,104 @@
+div.todo-nosotros {
+    @include textura();
+    overflow: hidden;
+    margin-top: 0; // font-family: 'Lato';
+    // #first-screen {
+    //     position: relative;
+    //     border: 1px solid rgba(0, 0, 0, 0);
+    //     border-bottom: 20px solid $a;
+    //     #logo-about-us {
+    //         position: relative;
+    //         right: -1100px;
+    //         transition: width .5s ease;
+    //         width: 591px;
+    //         @media screen and (max-height: 700px) {
+    //             width: 400px;
+    //         }
+    //         img {
+    //             width: 100%;
+    //         }
+    //     }
+    //     h1 {
+    //         position: relative;
+    //         margin: 0;
+    //         left: -1200px;
+    //         text-align: center;
+    //         font-size: 400%;
+    //         transition: font-size .5s ease;
+    //         font-family: "Courgette";
+    //         @media screen and (max-height: 700px) {
+    //             font-size: 250%;
+    //         }
+    //         @media screen and (max-height: 520px) {
+    //             display: none;
+    //         }
+    //     }
+    //     span#flecha-abajo {
+    //         position: absolute;
+    //         bottom: 30px;
+    //         left: 49%;
+    //         display: block;
+    //         width: 30px;
+    //         font-size: 300%;
+    //         color: $a;
+    //         transition: all .2s ease;
+    //         &:hover {
+    //             color: $hover;
+    //         }
+    //     }
+    // }
+    div.nosotros.uk-container {
+        max-width: 1000px;
+        div.contenedor-nosotros {
+            div.social {    
+                @include ul-social(252px, $a, 30px);
+                margin: 50px auto 80px;
+               
+            }
+            h3.titulo {
+                margin: 40px 0;
+                @include h3Titulo(3em);
+            }
+            div#nosotros {
+                padding-top: 50px;
+                div.losotro {
+                    // width: 22%;
+                    // margin: 50px 2% 0;
+                    height: 400px;
+                    transition: all .3s ease;
+                    &:hover {
+                        color: $a;
+                    }
+                    h5 {
+                        text-align: center;
+                        margin: 20px 0;
+                        font-size: inherit;
+                    }
+                    .container-photo {
+                        height: 320px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        .foti {
+                            height: 350px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    .foto-veronica {
+                        background-image: url('img/mujer3.jpg');
+                        background-position: 50% 0;
+                    }
+                    .foto-karina {
+                        background-image: url('img/mujer2.jpg');
+                    }
+                    .foto-cecilia {
+                        background-image: url('img/mujer1.jpg'); // background-position: 100% 0;
+                    }
+                    .foto-marcos {
+                        background-image: url('img/hombre.jpg'); // background-position: 20% 0;
+                    }
+                }
+            }
+        }
+    }
+}

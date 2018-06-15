@@ -1,0 +1,388 @@
+/*   Tabla eventos   */
+
+// widget
+ul.event-widget{
+    margin: 0;
+    li#li-events {
+        width: 80%;
+        margin: 0 auto;
+        // padding-top: 15px; 
+        // border-bottom: 1px solid rgb(190, 190, 190);
+        text-align: left;
+        &:nth-of-type(1) {
+            padding-top: 0;
+        }
+        img {
+            width: calc(30% - 10px);
+            float: left;
+        }
+        a {
+            position: relative;
+            bottom: 2px;
+            width: 70%;
+            font-size: 85%;
+            float: right;
+            @media (max-width: 1450px) {
+                font-size: 75%;
+            }
+        }
+    }
+    hr#events {
+        margin: 15px 0;
+        border-color: rgba(255, 255, 255, 0.1);
+        ;
+    }
+}
+
+///////////////////////////////////////
+
+#em-wrapper>div.em-search-wrapper>div>form>div.em-search-main>button {
+    background: $a!important;
+}
+#em-wrapper>p:nth-child(1) {
+    display:none;
+}
+div.css-events-list {
+    .un-evento {
+        margin: 20px 0;
+        &:nth-of-type(1) {
+            margin-top: 0;
+        }
+    }
+    div.uk-card-media-left {
+        @media(max-width: 776px) {
+            width: 50%;
+        }
+        @media(max-width: 460px) {
+            display: none;
+        }
+        box-sizing: border-box;
+        height: 300px;
+        div.event-image-container {
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    div.aq-body {
+        box-sizing: border-box;
+        @media(max-width: 776px) {
+            width: 50%;
+        }
+        @media(max-width: 460px) {
+            width: 100%;
+            height: 295px;
+        }
+        .uk-card-body {
+            padding: 0;
+            height: 300px;
+            div.contenido-evento {
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+                padding: 40px 20px;
+                box-sizing: border-box;
+                float: left; // @media(max-width: 776px) {
+                //     display: none
+                // }
+                div.content-footer {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0;
+                    text-align: center;
+                    ul {
+                        padding: 0 20px;
+                        margin: 0;
+                        display: table;
+                        width: 100%;
+                        list-style: none;
+                        li {
+                            float: left;
+                            margin-right: 5px;
+                            &:after {
+                                content: ',';
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                                &:after {
+                                    content: '.';
+                                }
+                            }
+                        }
+                    }
+                }
+                @media(max-width: 776px) {
+                    width: 100%;
+                }
+                h3 {
+                    @media(max-width: 776px) {
+                        font-size: 1.2em;
+                    }
+                }
+                span.fechayhora {
+                    font-family: Lato;
+                    @media(max-width: 776px) {
+                        font-size: 85%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.eventos-todo {
+    @include todoYNoTodo();
+}
+
+div.no-todo {
+    @include todoYNoTodo();
+}
+
+body>div.todo>div>ul {
+    margin: 20px 0 10px;
+}
+
+// PÁGINA FORMULARIO AGREGAR EVENTO 
+div.agregarevento {
+    div.uk-margin {
+        max-width: 420px;
+        width: 70%;
+        label {
+            font-size: 16px;
+        }
+    }
+    div.event-categories {
+        select {
+            align-items: left;
+            &[name="event_categories[]"] {
+                option {
+                    margin: 5px 0;
+                }
+                margin: 10px 0;
+                padding: 10px;
+                height: 200px;
+            }
+            &#location-country {
+                height: 35px;
+            }
+        }
+    }
+    input:not([type='checkbox']) {
+        height: 30px !important;
+        border: 1px solid rgb(229, 229, 229);
+    }
+    #em-time-all-day,
+    #no-location,
+    #event-rsvp {
+        // display: inline;
+        position: relative;
+        top: 1px;
+    }
+    p {
+        font-size: 80%;
+    }
+    input,
+    label,
+    select {
+        font-size: 100%;
+        color: #666;
+    }
+    padding: 30px;
+    div.css-event-form {
+        form {
+            div.wrap {
+                input#event-name {
+                    height: 40px;
+                }
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    color: $a;
+                }
+                div.inside.event-form-name {
+                    font-size: 80%;
+                    color: #999;
+                }
+                div.inside.event-form-when {
+                    width: 100%;
+                    display: table;
+                    content: '';
+                    clear: both;
+                    select#recurrence-weekday {
+                        margin-top: 20px;
+                    }
+                    p.em-date-range {
+                        width: 48%;
+                        margin-right: 15px;
+                        span.em-event-text {
+                            margin-top: 0;
+                        }
+                    }
+                    p.em-date-range,
+                    p.em-time-range,
+                    p#after-date {
+                        max-width: 280px;
+                        input:not([type='checkbox']) {
+                            width: 140px;
+                            border: none!important;
+                            text-align: center!important;
+                            font-size: 120%!important;
+                            margin: 10px 0;
+                        }
+                        float: left;
+                        box-sizing: border-box;
+                    }
+                }
+                div.inside.event-form-image {
+                    p {
+                        display: block;
+                        margin: 10px 0;
+                    }
+                    input#event-image {
+                        font-size: 80%;
+                        padding: 20px;
+                    }
+                }
+                div.inside.event-form-where {
+                    em#em-location-reset {
+                        font-size: 80%;
+                        font-style: normal;
+                        a {
+                            color: #218cff;
+                        }
+                    }
+                    div#em-location-data {
+                        table.em-location-data {
+                            tbody {
+                                tr {
+                                    &.em-location-data-name {
+                                        th {
+                                            vertical-align: top;
+                                            position: relative;
+                                            top: 5px;
+                                        }
+                                    }
+                                    th {
+                                        vertical-align: middle;
+                                    }
+                                    td {
+                                        input,
+                                        select {
+                                            width: 95% !important; // float: left;
+                                        }
+                                        em {
+                                            display: block;
+                                            text-align: justify;
+                                            font-size: 80%;
+                                            font-style: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        } // div.em-location-map-container {
+                        //     width: 48%;
+                        //     margin-right: 2%;
+                        // }
+                        div.em-location-map-container {
+                            width: 46%;
+                            margin-left: 2%;
+                            padding: 5px;
+                            background: white !important;
+                            border: 1px solid #d9d9d9;
+                        }
+                    }
+                }
+                div.inside.event-form-details {
+                    button {
+                        //background-color: #218cff;
+                        border: none;
+                        border-radius: 5px; //color: white;
+                        //padding: 7px;
+                        font-family: 'Roboto', 'Segoe UI', 'sans serif';
+                        transition: all .2s; // &:hover {
+                        //     background-color: darken(#218cff, 10%);
+                        // }
+                    }
+                    select {
+                        overflow: hidden;
+                    }
+                    div.event-editor {
+                        textarea {
+                            border-color: #d9d9d9;
+                            border-radius: 5px;
+                        }
+                        p {
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+span.em-event-text {
+    display: block;
+    margin-bottom: 5px;
+}
+
+p#after-date {
+    width: 47%;
+    float: right;
+}
+
+div.time-picker {
+    ul {
+        li {
+            height: 20px;
+            color: #444;
+            font-size: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:1150px) {
+    table.em-location-data,
+    div.em-location-map-container {
+        float: none !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and(max-width: 1300px) {
+    th.event-location,
+    td.mapa {
+        display: none;
+    }
+}
+
+div.social {
+    @include ul-social(240px, $z);
+    margin: 60px auto;
+} 
+
+// SINGLE EVENT
+p.fechayhora {
+    width: 50%; 
+    color: $a;
+    font-size: 120%!important;
+}
+
+#wp-link-close {
+    right: 30px !important;
+}
+
+p.howto {
+    margin: 0 !important;
+}
+
+p.submit {
+    i {
+        display: block;
+        margin: 0 auto;
+        width: 250px;
+    }
+}

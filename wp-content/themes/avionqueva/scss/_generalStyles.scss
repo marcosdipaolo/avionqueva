@@ -1,0 +1,112 @@
+/*  ESTILOS GENERALES    */
+
+body {
+    font-family: 'Lato';
+    p, h1, h2, h3, h4, h5, h6 {
+        color: #444;
+    } 
+}
+
+a {
+    color: $a;
+    list-style: none;
+    transition: all ease .2s;
+    &:hover {
+        color: $hover;
+        text-decoration: none;
+    } // span{
+    //     text-decoration: inherit;
+    // } 
+}
+li.current-menu-item>a,
+li.current-menu-ancestor>a {
+    color: $hover!important;
+}
+.ancho_completo {
+    max-width: none !important;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: none !important;
+}
+button,
+input {
+    border-radius: 0;
+}
+
+.todo {
+    overflow: hidden;
+    @include textura();
+}
+
+.bannersWrapper {
+    overflow: hidden;
+}
+
+// div.uk-container {
+//    padding-top: 50px;
+// }
+.no-margin {
+    margin: 0 !important;
+}
+
+.clearfix::after,
+.clearfix::before {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Lato;
+}
+
+.uk-container {
+    max-width: 1300px;
+    padding-top: 20px;
+    &.single {
+        max-width: 900px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+#wpforms-submit-296 {
+    background-color: brown;
+    color: #fffff5;
+    border: none;
+    transition: all ease .2s;
+    box-sizing: border-box;
+    width: 100px;
+    height: 38px;
+    &:hover {
+        background-color: #fffff5;
+        color: brown;
+        border: 1px solid brown;
+    }
+}
+
+input,
+textarea {
+    border: none;
+}
+
+@media (max-width: 320px) {
+    body {
+        width: 320px;
+    }
+}
+
+em {
+    color: inherit;
+}
+
+/*      FIN ESTILOS GENERALES        */
