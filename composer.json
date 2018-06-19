@@ -1,0 +1,14 @@
+{
+    "name": "marcos/avionqueva",
+    "description": "Sitio de noticias de Literatura infantil y juvenil",
+    "type": "Wordpress install",
+    "authors": [
+        {
+            "name": "Marcos",
+            "email": "marcosdipaolo@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
